@@ -66,6 +66,7 @@ export default class CardGallery extends Component {
           {data.map(i => {
             return (
               <CardItemC key={i.key}>
+                <CardImgC />
                 <span>{i.name}</span>
               </CardItemC>
             );
