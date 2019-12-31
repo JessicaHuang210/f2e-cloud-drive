@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/f2e-cloud-drive/static/js/main.bfa969a0.chunk.js",
+    "main.js.map": "/f2e-cloud-drive/static/js/main.bfa969a0.chunk.js.map",
+    "runtime-main.js": "/f2e-cloud-drive/static/js/runtime-main.14d61b4c.js",
+    "runtime-main.js.map": "/f2e-cloud-drive/static/js/runtime-main.14d61b4c.js.map",
+    "static/js/2.694d6cad.chunk.js": "/f2e-cloud-drive/static/js/2.694d6cad.chunk.js",
+    "static/js/2.694d6cad.chunk.js.map": "/f2e-cloud-drive/static/js/2.694d6cad.chunk.js.map",
+    "index.html": "/f2e-cloud-drive/index.html",
+    "precache-manifest.4a676a8321d910a29f2c732a1df2eaf7.js": "/f2e-cloud-drive/precache-manifest.4a676a8321d910a29f2c732a1df2eaf7.js",
+    "service-worker.js": "/f2e-cloud-drive/service-worker.js",
+    "static/js/2.694d6cad.chunk.js.LICENSE": "/f2e-cloud-drive/static/js/2.694d6cad.chunk.js.LICENSE",
+    "static/media/Cloud-monster.svg": "/f2e-cloud-drive/static/media/Cloud-monster.18120ba2.svg",
+    "static/media/logo.svg": "/f2e-cloud-drive/static/media/logo.bc3a6621.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14d61b4c.js",
+    "static/js/2.694d6cad.chunk.js",
+    "static/js/main.bfa969a0.chunk.js"
+  ]
+}
