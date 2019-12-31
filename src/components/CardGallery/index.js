@@ -39,6 +39,7 @@ const CardItemC = styled.div`
   }
 `;
 
+const CardImgC = styled.img``;
 export default class CardGallery extends Component {
   constructor(props) {
     super(props);
