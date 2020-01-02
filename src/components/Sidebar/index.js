@@ -17,11 +17,13 @@ const SidebarC = styled.header`
   width: ${sidebarWidth};
   padding: 4rem 3rem;
   position: fixed;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   top: 0;
   bottom: 0;
   font-size: ${fsNormal};
   transition: ${transitionSlow};
+  background-color: ${sidebarBgColor};
   @media ${device.unLaptop} {
     transform: translateX(-100%);
   }
@@ -30,10 +32,10 @@ const SidebarC = styled.header`
     background: ${sidebarBgColor} url(${cloudMonster}) no-repeat left bottom;
     background-size: contain;
     position: absolute;
-    width: 200%;
-    height: 200%;
-    bottom: -15%;
-    left: -30%;
+    width: 150%;
+    height: 105%;
+    bottom: -5%;
+    left: 0%;
     z-index: -1;
     transform: rotate(10deg);
   }
