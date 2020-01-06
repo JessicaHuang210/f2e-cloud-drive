@@ -5,7 +5,6 @@ const list = require("./data/list");
 
 router.get("/", async (req, res) => {
   let status = 200;
-  console.log(list[200]);
   res.status(status).json(list[200].data);
 });
 
