@@ -39,11 +39,11 @@ export default async (input, params = {}) => {
     url: apiUrl + url + queryString
   })
     .then(response => {
-      console.log(response);
       return response;
     })
     .catch(error => {
       console.log(error);
+      return { isError: true, data: null };
     })
     .finally(function() {});
 };

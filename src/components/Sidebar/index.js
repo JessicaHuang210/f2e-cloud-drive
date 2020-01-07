@@ -13,6 +13,8 @@ import { lighten } from "polished";
 import logo from "assets/logo.svg";
 import cloudMonster from "assets/Cloud-monster.svg";
 import UploadBtn from "components/UploadBtn";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 const SidebarC = styled.header`
   width: ${sidebarWidth};
   padding: 4rem 3rem;
@@ -61,11 +63,11 @@ const NavItemC = styled.a`
 export default class Sidebar extends Component {
   state = {
     menuList: [
-      { key: 1, name: "上傳資料夾" },
-      { key: 2, name: "新資料夾" },
-      { key: 3, name: "共享資料夾" },
-      { key: 4, name: "已標記星號" },
-      { key: 5, name: "垃圾桶" }
+      { key: 1, name: "上傳資料夾", path: "" },
+      { key: 2, name: "新資料夾", path: "" },
+      { key: 3, name: "共享資料夾", path: "" },
+      { key: 4, name: "已標記星號", path: "" },
+      { key: 5, name: "垃圾桶", path: "Trash" }
     ]
   };
   render() {

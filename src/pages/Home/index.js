@@ -12,7 +12,7 @@ class Home extends Component {
   }
   async componentDidMount() {
     const { data } = await Ajax(apis.getHomeList);
-    this.setState({ folderData: data });
+    this.setState({ folderData: data || [] });
   }
   render() {
     const { folderData } = this.state;
