@@ -13,7 +13,7 @@ import { lighten } from "polished";
 import logo from "assets/logo.svg";
 import cloudMonster from "assets/Cloud-monster.svg";
 import UploadBtn from "components/UploadBtn";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SidebarC = styled.header`
   width: ${sidebarWidth};
@@ -48,13 +48,13 @@ const LogoC = styled.img`
 `;
 const NavC = styled.nav`
   margin: 4rem auto;
-  color: ${linkTextColor};
 `;
-const NavItemC = styled.a`
+const NavItemC = styled.span`
   display: block;
   padding: 1.2rem 2rem;
   transition: ${transitionNormal};
   border-radius: 5rem;
+  color: ${linkTextColor};
   &:hover {
     background-color: ${lighten(0.1, sidebarBgColor)};
   }
@@ -67,18 +67,24 @@ export default class Sidebar extends Component {
       { key: 2, name: "新資料夾", path: "" },
       { key: 3, name: "共享資料夾", path: "" },
       { key: 4, name: "已標記星號", path: "" },
-      { key: 5, name: "垃圾桶", path: "Trash" }
+      { key: 5, name: "垃圾桶", path: "/Trash" }
     ]
   };
   render() {
     const { menuList } = this.state;
     return (
       <SidebarC>
-        <LogoC src={logo} alt="logo" />
+        <Link to="/">
+          <LogoC src={logo} alt="logo" />
+        </Link>
         <UploadBtn />
         <NavC>
           {menuList.map(i => {
-            return <NavItemC key={i.key}>{i.name}</NavItemC>;
+            return (
+              <Link to={i.path} key={i.key}>
+                <NavItemC>{i.name}</NavItemC>
+              </Link>
+            );
           })}
         </NavC>
       </SidebarC>

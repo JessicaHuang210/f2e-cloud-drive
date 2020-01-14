@@ -20,15 +20,15 @@ const CardItemC = styled.div`
   min-height: 9rem;
   border-radius: 0.5rem;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   margin-bottom: 2rem;
-  @media ${device.mobileL} {
+  @media ${device.mobileM} {
     width: 49%;
     &:not(:nth-child(2n)) {
       margin-right: 2%;
     }
   }
-  @media ${device.tablet} {
+  @media ${device.mobileL} {
     width: 32%;
     &:not(:nth-child(2n)) {
       margin-right: 0%;
@@ -37,9 +37,34 @@ const CardItemC = styled.div`
       margin-right: 2%;
     }
   }
+  @media ${device.laptop} {
+    width: 23.5%;
+    &:not(:nth-child(2n)) {
+      margin-right: 0%;
+    }
+    &:not(:nth-child(3n)) {
+      margin-right: 0%;
+    }
+    &:not(:nth-child(4n)) {
+      margin-right: 2%;
+    }
+  }
 `;
 
-const CardImgC = styled.img``;
+const CardItemTitleC = styled.div`
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+`;
+
+const CardImgC = styled.div`
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  height: 15em;
+  & img {
+    width: 100%;
+  }
+`;
 export default class CardGallery extends Component {
   constructor(props) {
     super(props);
@@ -66,8 +91,15 @@ export default class CardGallery extends Component {
           {data.map(i => {
             return (
               <CardItemC key={i.key}>
-                <CardImgC />
-                <span>{i.name}</span>
+                <CardImgC>
+                  {i.imgUrl ? (
+                    <img
+                      alt=""
+                      src="https://i2.wp.com/www.ieo.com.tw/wp-content/uploads/revslider/main-slider/folder.png"
+                    />
+                  ) : null}
+                </CardImgC>
+                <CardItemTitleC>{i.name}</CardItemTitleC>
               </CardItemC>
             );
           })}

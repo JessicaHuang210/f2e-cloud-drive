@@ -14,10 +14,12 @@ export default class GlobalLayout extends PureComponent {
         <Router>
           <Switch>
             <Route path="/Login" component={Login}></Route>
-            <Wrap>
-              <Sidebar />
-              <Main />
-            </Wrap>
+            <Route>
+              <Wrap>
+                <Sidebar />
+                <Main />
+              </Wrap>
+            </Route>
           </Switch>
         </Router>
       </Fragment>
