@@ -1,0 +1,10 @@
+.nav-link {
+  display: block;
+  animation: TopFadeIn ease-in-out 0.6s backwards;
+}
+@debug 5.2e3;
+@for $i from 1 through 5 {
+  .nav-link:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.2}s;
+  }
+}

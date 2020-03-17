@@ -14,6 +14,7 @@ import logo from "assets/logo.svg";
 import cloudMonster from "assets/Cloud-monster.svg";
 import UploadBtn from "components/UploadBtn";
 import { Link } from "react-router-dom";
+import "./style.scss";
 
 const SidebarC = styled.header`
   width: ${sidebarWidth};
@@ -81,7 +82,7 @@ export default class Sidebar extends Component {
         <NavC>
           {menuList.map(i => {
             return (
-              <Link to={i.path} key={i.key}>
+              <Link className="nav-link" to={i.path} key={i.key}>
                 <NavItemC>{i.name}</NavItemC>
               </Link>
             );
